@@ -7,7 +7,7 @@ import os
 os.environ["OPENAI_API_KEY"] = "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"  #openai 키 입력
 
 def generate_response(input_text):  #llm이 답변 생성
-    llm = OpenAI(model_name='gpt-4-0314', temperature=0)
+    llm = OpenAI(model_name='gpt-3.5', temperature=0)
     st.info(llm(input_text))
 
 with st.form('Question'):
