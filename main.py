@@ -1,15 +1,16 @@
-#from dotenv import load_dotenv
-#load_dotenv()
 import streamlit as st
-from langchain.chat_models import ChatOpenAI
+from langchain.llms import OpenAI
+st.set_page_config(page_title="🦜🔗 뭐든지 질문하세요~ ")
+st.title('🦜🔗 뭐든지 질문하세요~ ')
 
-chat_model = ChatOpenAI()
+import os
+os.environ["OPENAI_API_KEY"] = "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"  #openai 키 입력
 
-st.title('인공지능 시인')
+def generate_response(input_text):  #llm이 답변 생성
+    llm = OpenAI(model_name='gpt-4-0314', temperature=0)
+    st.info(llm(input_text))
 
-content = st.text_input('시의 주제를 제시해주세요.')
-
-if st.button('시 작성 요청하기'):
-    with st.spinner('시 작성 중...'):
-        result = chat_model.predict(content + "에 대한 시를 써줘")
-        st.write(result)
+with st.form('Question'):
+    text = st.text_area('질문 입력:', 'What types of text models does OpenAI provide?') #첫 페이지가 실행될 때 보여줄 질문
+    submitted = st.form_submit_button('보내기')
+    generate_response(text)
