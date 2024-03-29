@@ -1,2 +1,6 @@
-openai>=0.12.5
-streamlit>=1.0.0
+PyPDF2
+openai
+faiss-cpu
+langchain
+langchain_openai
+streamlit
