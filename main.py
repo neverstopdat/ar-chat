@@ -8,8 +8,8 @@ import os
 from PIL import Image
 
 HN_IMAGE = Image.open("img/hn_logo.png")
-st.set_page_config(page_title="NewsNerd HackerBot 🤖📰")
-st.title("NewsNerd HackerBot 🤖📰")
+st.set_page_config(page_title="OpenAI 챗봇 테스트🤖📰")
+st.title("OpenAI 챗봇 테스트 🤖📰")
 stop = False
 
 with st.sidebar:
