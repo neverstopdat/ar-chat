@@ -21,11 +21,6 @@ with st.sidebar:
     and hacker happenings? Fear not, for your cyber-savvy companion has descended upon the scene – 
     behold the extraordinary **NewsNerd HackerBot**!
     """)
-
-
-
-st.title("Direct Question Answering with OpenAI")
-
 # Ensure the OPENAI_API_KEY is set
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
