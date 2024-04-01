@@ -5,6 +5,8 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 import os
+from PIL import Image
+
 HN_IMAGE = Image.open("img/hn_logo.png")
 st.set_page_config(page_title="NewsNerd HackerBot 🤖📰")
 st.title("NewsNerd HackerBot 🤖📰")
