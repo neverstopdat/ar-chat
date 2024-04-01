@@ -5,6 +5,22 @@ from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 import os
+HN_IMAGE = Image.open("img/hn_logo.png")
+st.set_page_config(page_title="NewsNerd HackerBot 🤖📰")
+st.title("NewsNerd HackerBot 🤖📰")
+stop = False
+
+with st.sidebar:
+    st.image(HN_IMAGE)
+    st.markdown("""
+    # **Greetings, Digital Explorer!**
+
+    Are you fatigued from navigating the expansive digital realm in search of your daily tech tales 
+    and hacker happenings? Fear not, for your cyber-savvy companion has descended upon the scene – 
+    behold the extraordinary **NewsNerd HackerBot**!
+    """)
+
+
 
 st.title("Direct Question Answering with OpenAI")
 
